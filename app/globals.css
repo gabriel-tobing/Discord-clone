@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "gg-sans";
+  src: url("/fonts/gg-sans-regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "gg-sans";
+  src: url("/fonts/gg-sans-medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "gg-sans";
+  src: url("/fonts/gg-sans-semibold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "gg-sans";
+  src: url("/fonts/gg-sans-bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+body {
+  font-family: "gg-sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
