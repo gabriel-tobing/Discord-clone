@@ -20,7 +20,9 @@ const Layouts = ({ children }: LayoutsProps) => {
                 <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col bg-transparent overflow-hidden">
                   <div className="relative flex w-full h-full overflow-hidden">
                     <Sidebar />
-                    {children}
+                    <div className="relative flex flex-col grow overflow-hidden">
+                      <div className="flex justify-start items-stretch flex-auto min-w-0 min-h-0">{children}</div>
+                    </div>
                   </div>
                 </div>
               </div>
