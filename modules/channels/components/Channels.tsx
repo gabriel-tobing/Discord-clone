@@ -139,22 +139,19 @@ const Channels = () => {
               <div className="mx-2">
                 <div className="relative z-[100] overflow-visible">
                   <div className="flex items-stretch w-36 h-6 px-0.5 bg-tertiary rounded shadow-none text-normal cursor-text overflow-hidden">
+                    {" "}
+                    {/* Kalau tidak ada valuenya maka widthnya w-36 jika ada maka w-60  */}
                     <div className="relative flex-1 h-[inherit] py-0.5 text-sm font-medium leading-5 overflow-hidden">
-                      <div className="absolute z-[1] pl-1 pr-0.5 pb-5 text-muted">
-                        <div className="whitespace-pre-wrap">Search</div>
-                      </div>
                       <div className="relative z-[1] h-5 border-none rounded-sm overflow-hidden">
                         <div className="px-0.5 pb-5 outline-none select-text whitespace-pre-wrap break-words overflow-x-auto overflow-y-hidden">
                           <div>
                             <div>
-                              <div
-                                className="relative inline-block min-w-[1px] text-left whitespace-pre"
-                                style={{ direction: "ltr" }}
-                              >
-                                <span className="min-w-[1px]">
-                                  <br />
-                                </span>
-                              </div>
+                              <input
+                                type="text"
+                                placeholder="Search"
+                                className="relative inline-block w-full min-w-[1px] bg-transparent outline-none text-left whitespace-pre text-normal placeholder:text-muted"
+                                style={{ direction: "ltr", caretColor: "hsl(210 calc(1 * 9.1%) 87.1% / 1)" }}
+                              />
                             </div>
                           </div>
                         </div>
@@ -259,7 +256,7 @@ const Channels = () => {
                   style={{ clip: "rect(0 0 0 0)", clipPath: "inset(50%)" }}
                 ></span>
                 <div className="relative z-0 flex flex-auto min-w-0 min-h-0">
-                  <div className="absolute top-0 left-4 right-4 z-[2] flex items-center h-8 min-h-[24px] bg-brand-experiment rounded-b-lg shadow-elevation-low capitalize opacity-95 cursor-pointer">
+                  <div className="absolute top-0 left-4 right-4 z-[2] flex items-center h-8 min-h-[24px] bg-brand-experiment rounded-b-lg shadow-elevation-low capitalize opacity-95 cursor-pointer hidden">
                     <button
                       type="button"
                       className="relative block flex-auto h-6 px-3 bg-none whitespace-nowrap text-ellipsis overflow-hidden text-white-500 text-sm font-medium text-left leading-6 cursor-pointer"
@@ -306,19 +303,270 @@ const Channels = () => {
                       className="relative flex flex-col justify-end items-center min-h-full"
                       style={{ overflowAnchor: "none" }}
                     >
-                      <ol className="min-h-0 overflow-hidden">
+                      <ol className="block w-full h-full min-h-0 overflow-hidden">
                         <span className="hidden">
                           Use the up and down arrow keys to navigate between messages quickly. New messages will be
                           added to the bottom of the list as they come in.
                         </span>
-                        <div className="flex flex-col justify-end m-4"></div>
-                        <div className=""></div>
-                        <div className=""></div>
+                        <div className="flex flex-col justify-end m-4">
+                          <div className="flex flex-col items-center pt-4 px-4">
+                            <div className="flex flex-col items-center max-w-[400px]">
+                              <div>
+                                <h3 className="text-header-primary text-[32px] font-bold text-center leading-10">
+                                  <p>Welcome to</p>
+                                  <p>WPU</p>
+                                </h3>
+                                <div className="mt-2 mb-0 text-interactive-normal text-sm font-normal text-center leading-[18px]">
+                                  This is the beginning of this server.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="relative left-auto right-auto z-[1] flex justify-center items-center h-0 mt-6 mb-2 ml-4 mr-3.5 border-t border-status-danger pointer-events-none">
+                          <span className="block flex-[0_0_auto] py-0.5 px-1 bg-primary rounded-lg text-status-danger text-xs font-semibold leading-[13px]">
+                            September 24, 2020
+                          </span>
+                          <span className="absolute -top-[7px] right-0 flex justify-center items-center h-[13px] pl-[1px] pr-1 bg-status-danger rounded-tr rounded-br text-white-500 text-[10px] font-bold leading-[9px] uppercase">
+                            <svg
+                              className="absolute top-0 -left-2 block h-[13px]"
+                              aria-hidden="true"
+                              role="img"
+                              width="8"
+                              height="13"
+                              viewBox="0 0 8 13"
+                            >
+                              <path
+                                className="text-status-danger fill-status-danger"
+                                stroke="currentColor"
+                                fill="transparent"
+                                d="M8.16639 0.5H9C10.933 0.5 12.5 2.067 12.5 4V9C12.5 10.933 10.933 12.5 9 12.5H8.16639C7.23921 12.5 6.34992 12.1321 5.69373 11.4771L0.707739 6.5L5.69373 1.52292C6.34992 0.86789 7.23921 0.5 8.16639 0.5Z"
+                              ></path>
+                            </svg>
+                            New
+                          </span>
+                        </div>
+                        <li className="relative outline-none">
+                          <div className="relative min-h-[2.75rem] mt-[1.0625rem] py-[0.125rem] pl-message pr-12 break-words select-text">
+                            <div className="static ml-0 pl-0" style={{ textIndent: "0" }}>
+                              <NextImage
+                                src="https://cdn.discordapp.com/avatars/376337405185097728/02a31ea74809b148c7d8c563cae76948.webp?size=80"
+                                alt=""
+                                width={40}
+                                height={40}
+                                className="absolute left-4 z-[1] w-10 h-10 mt-message-profile rounded-full pointer-events-auto overflow-hidden cursor-pointer select-none"
+                              />
+                              <h3 className="relative block min-h-[1.375rem] text-muted leading-[1.375rem] whitespace-break-spaces overflow-hidden">
+                                <span className="mr-0">
+                                  <span className="relative text-[rgb(46,204,113)] text-base font-medium leading-[1.375rem] align-baseline overflow-hidden">
+                                    Sandhika Galih
+                                  </span>
+                                  <span>
+                                    <NextImage
+                                      src="https://cdn.discordapp.com/role-icons/761212763476328474/2aaf1fc6ac1a1c41824ea59fac6c603f.webp?size=20&quality=lossless"
+                                      alt=""
+                                      width={20}
+                                      height={20}
+                                      className="relative top-[1px] inline-block w-role h-role ml-1 object-contain align-top cursor-pointer overflow-hidden"
+                                    />
+                                  </span>
+                                </span>
+                                <span className="inline-block h-5 ml-1 text-muted text-xs font-medium leading-[1.375rem] align-baseline pointer-events-none cursor-default">
+                                  <time>
+                                    <i className="absolute inline-block opacity-0">-</i>
+                                    09/24/2020 6:30 PM
+                                  </time>
+                                </span>
+                              </h3>
+                              <div className="relative ml-message-container pl-message text-normal text-base leading-[1.375rem] whitespace-break-spaces break-words select-text overflow-hidden">
+                                <strong>
+                                  <span>Mohon agar membaca seluruh pesan di bawah ini</span>
+                                  <span>, atau kalian tidak dapat mengakses channel</span>
+                                  <span>-channel di server ini secara penuh</span>
+                                </strong>
+                                <span> Halo Teman</span>
+                                <span>-teman semua</span>
+                                <span>! Selamat datang di Server Discord </span>
+                                <strong>
+                                  <span>Web Programming Unpas</span>
+                                </strong>
+                              </div>
+                            </div>
+                            <div
+                              className="relative grid grid-flow-row gap-y-1 h-fit min-w-0 min-h-0 py-[0.125rem]"
+                              style={{ gridTemplateColumns: "repeat(auto-fill, minmax(100%, 1fr))" }}
+                            >
+                              <div className="flex flex-col justify-self-start self-start w-full min-w-[160px] max-w-[432px] p-4 bg-secondary rounded cursor-default select-none">
+                                <h3 className="mb-3 text-interactive-normal text-xs font-bold leading-4 uppercase tracking-[0.02em] whitespace-nowrap text-ellipsis overflow-hidden">
+                                  You've been invited to join a server
+                                </h3>
+                                <div className="flex flex-wrap gap-4">
+                                  <div className="flex items-center flex-[1000_0_auto] gap-4 max-w-full">
+                                    <div className="relative flex-[0_0_auto] w-[50px] h-[50px] bg-primary rounded-[15px] overflow-hidden">
+                                      <NextImage
+                                        src="https://cdn.discordapp.com/icons/722002048643497994/a_d85c162eea1f847b930479656e07dbfd.webp?size=56"
+                                        alt=""
+                                        width={56}
+                                        height={56}
+                                        className="object-cover"
+                                      />
+                                    </div>
+                                    <div className="flex flex-col justify-center items-stretch flex-auto flex-nowrap min-w-[1px]">
+                                      <div>
+                                        <h3 className="mb-0.5 text-header-primary text-base font-semibold leading-5 whitespace-nowrap text-ellipsis overflow-hidden cursor-pointer">
+                                          <span className="flex items-center overflow-hidden">
+                                            <div className="flex items-center flex-[0_1_auto] max-w-full overflow-hidden">
+                                              <span className="flex-auto min-w-0 whitespace-nowrap text-ellipsis overflow-hidden">
+                                                WPU
+                                              </span>
+                                            </div>
+                                            <span className="ml-1">
+                                              <div className="mr-2">
+                                                <div>
+                                                  <div className="relative flex justify-center items-center w-4 h-4">
+                                                    <svg
+                                                      className="w-full h-full"
+                                                      aria-hidden="true"
+                                                      role="img"
+                                                      width="16"
+                                                      height="16"
+                                                      viewBox="0 0 16 15.2"
+                                                    >
+                                                      <path
+                                                        fill="rgba(194, 124, 222, 1)"
+                                                        fillRule="evenodd"
+                                                        d="m16 7.6c0 .79-1.28 1.38-1.52 2.09s.44 2 0 2.59-1.84.35-2.46.8-.79 1.84-1.54 2.09-1.67-.8-2.47-.8-1.75 1-2.47.8-.92-1.64-1.54-2.09-2-.18-2.46-.8.23-1.84 0-2.59-1.54-1.3-1.54-2.09 1.28-1.38 1.52-2.09-.44-2 0-2.59 1.85-.35 2.48-.8.78-1.84 1.53-2.12 1.67.83 2.47.83 1.75-1 2.47-.8.91 1.64 1.53 2.09 2 .18 2.46.8-.23 1.84 0 2.59 1.54 1.3 1.54 2.09z"
+                                                      ></path>
+                                                    </svg>
+                                                    <div className="absolute -top-[0.05px] left-[0.05px] right-0 bottom-0 flex justify-center items-center pointer-events-none">
+                                                      <svg
+                                                        aria-hidden="true"
+                                                        role="img"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="10"
+                                                        height="10"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <path
+                                                          fill="hsl(0 calc(1 * 0%) 100% / 1)"
+                                                          fillRule="evenodd"
+                                                          d="M23 12a11 11 0 1 1-22 0 11 11 0 0 1 22 0Zm-4.16 5.85A9 9 0 0 0 15 3.52V4a3 3 0 0 1-3 3h-.77c-.13 0-.23.1-.23.23A2.77 2.77 0 0 1 8.23 10c-.13 0-.23.1-.23.23v1.52c0 .14.11.25.25.25H13a3 3 0 0 1 3 3v.77c0 .13.1.23.23.23 1.2 0 2.23.77 2.61 1.85ZM3.18 10.18A9 9 0 0 0 11 20.94v-2.7c0-.14-.1-.24-.23-.24h-.65A2.12 2.12 0 0 1 8 15.88c0-.56-.22-1.1-.62-1.5l-4.2-4.2Z"
+                                                          clipRule="evenodd"
+                                                          className=""
+                                                        ></path>
+                                                      </svg>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </span>
+                                          </span>
+                                        </h3>
+                                      </div>
+                                      <strong className="text-interactive-normal text-sm font-normal leading-[18px]">
+                                        <div className="flex items-center flex-wrap gap-x-3">
+                                          <div className="flex items-center flex-[0_1_auto] min-w-0">
+                                            <i className="block flex-[0_0_auto] w-2 h-2 mr-1 bg-green-360 rounded-full"></i>
+                                            <span className="flex-[0_1_auto] mr-0 text-interactive-normal whitespace-nowrap text-ellipsis overflow-hidden">
+                                              6,036 Online
+                                            </span>
+                                          </div>
+                                          <div className="flex items-center flex-[0_1_auto] min-w-0">
+                                            <i className="block flex-[0_0_auto] w-2 h-2 mr-1 bg-primary-400 rounded-full"></i>
+                                            <span className="flex-[0_1_auto] mr-0 text-interactive-normal whitespace-nowrap text-ellipsis overflow-hidden">
+                                              45,481 Members
+                                            </span>
+                                          </div>
+                                        </div>
+                                      </strong>
+                                    </div>
+                                  </div>
+                                  <button
+                                    type="button"
+                                    className="relative flex justify-center items-center flex-[1_0_auto] self-center w-auto h-10 py-0.5 px-4 bg-positive rounded-[3px] text-white-500 text-sm font-medium leading-5 whitespace-nowrap text-ellipsis overflow-hidden cursor-pointer select-none"
+                                  >
+                                    <div className="mx-auto whitespace-nowrap text-ellipsis overflow-hidden">
+                                      Joined
+                                    </div>
+                                  </button>
+                                </div>
+                              </div>
+                              <div className="flex items-center justify-self-start self-start flex-wrap -mb-2 pb-1">
+                                <div>
+                                  <div className="mr-1 mb-1 bg-secondary rounded-lg opacity-100 cursor-pointer select-none">
+                                    <div className="relative flex items-center py-[0.125rem] px-[0.375rem]">
+                                      <div>
+                                        <NextImage
+                                          src="https://discord.com/assets/7a934d8b65db3219592b.svg"
+                                          alt=""
+                                          width={16}
+                                          height={16}
+                                          className="w-4 h-4 min-w-[auto] min-h-[auto] my-[0.125rem] object-contain align-bottom"
+                                        />
+                                      </div>
+                                      <div className="min-w-[36px] ml-[0.375rem] text-brand-experiment-200 font-semibold text-center">
+                                        6613
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="hidden"></div>
+                              </div>
+                            </div>
+                            <div className="absolute top-0 right-0">
+                              <div className="absolute -top-4 right-0 z-[1] pl-8 pr-3.5 opacity-0 pointer-events-none">
+                                <div className="relative grid grid-flow-col justify-start items-center h-8 bg-primary rounded shadow-elevation-stroke select-none overflow-hidden">
+                                  <div className="relative flex justify-center items-center min-w-[24px] h-6 p-1 text-interactive-normal cursor-pointer">
+                                    <svg
+                                      className="block w-5 h-5 object-contain"
+                                      aria-hidden="true"
+                                      role="img"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="24"
+                                      height="24"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        fill="currentColor"
+                                        fillRule="evenodd"
+                                        d="M4 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm8 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+                                        clipRule="evenodd"
+                                        className=""
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
                       </ol>
                     </div>
                   </div>
                 </div>
-                <div className=""></div>
+                <form className="relative shrink-0 -mt-2 px-4 before:contents-[''] before:absolute before:top-0 before:left-0 before:w-5 before:h-2 before:bg-header-bar">
+                  <div className="relative w-full mb-6 bg-primary rounded-lg">
+                    <div
+                      className="max-h-[50vh] bg-channel-textarea rounded-lg opacity-50 overflow-x-hidden overflow-y-auto"
+                      style={{ backfaceVisibility: "hidden" }}
+                    >
+                      <div className="relative flex pl-4 cursor-not-allowed">
+                        <div className="relative w-full h-11 min-h-[44px] p-0 border-none bg-transparent text-normal text-base font-normal leading-[1.375rem] pointer-events-none resize-none">
+                          <div>
+                            <div className="absolute left-0 right-2.5 py-[11px] pr-2.5 text-channel-placeholder whitespace-nowrap text-ellipsis overflow-hidden pointer-events-none select-none">
+                              You do not have permission to send messages in this channel.
+                            </div>
+                            <div className="relative left-0 right-2.5 py-[11px] pr-2.5 outline-none text-normal text-base text-left leading-[1.375rem] whitespace-break-spaces caret-normal break-words select-text"></div>{" "}
+                            {/* Ini harusnya texarea */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=""></div>
+                  </div>
+                </form>
                 <div className=""></div>
               </main>
             </div>
