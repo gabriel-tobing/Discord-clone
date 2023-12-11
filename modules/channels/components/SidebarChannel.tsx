@@ -1,12 +1,15 @@
 import Link from "next/link";
 import NextImage from "next/image";
 
+//* Tipe Channel = Announcements, Stage, Text, Forum, Voice
+//TODO: Jika Channel list di scroll maka background image akan mengecil sesuai dengan scroll
+
 const SidebarChannel = () => {
   return (
     <div className="flex flex-col flex-[0_0_auto] w-60 min-h-0 bg-secondary overflow-hidden">
       <nav className="relative flex flex-col flex-1 bg-secondary box-border overflow-hidden select-none">
         <div className="relative cursor-pointer">
-          <header className="relative z-[3] py-3 px-4 bg-transparent shadow-none box-border font-medium">
+          <header className="relative z-[3] py-3 px-4 bg-transparent shadow-elevation-low box-border font-medium">
             <div
               className="flex items-center h-6 text-white-500"
               style={{ filter: "drop-shadow(0 1px 1px hsl(0 calc(1 * 0%) 0% / 0.8))" }}
@@ -68,7 +71,7 @@ const SidebarChannel = () => {
               </div>
             </div>
           </header>
-          <div className="absolute top-0 left-0 w-full h-[135px] bg-modifier-accent shadow-elevation-low translate-y-0 opacity-100 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-[135px] bg-modifier-accent shadow-elevation-low translate-y-0 opacity-100 overflow-hidden hidden">
             <div className="absolute top-0 left-0 w-[240px] h-[135px] translate-y-0 scale-100 before:contents-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-[58px] before:bg-banner">
               <NextImage
                 src="https://cdn.discordapp.com/banners/722002048643497994/a4fc972032f96e2829f6dd2904a87ee5.webp?size=240"
@@ -93,7 +96,7 @@ const SidebarChannel = () => {
         </div>
         <div className="relative z-[1] flex-auto min-h-0 pr-0 box-border overflow-x-hidden overflow-y-auto">
           <ul className="relative h-[4131px]">
-            <div className="h-[84px]"></div>
+            <div className="h-[84px] hidden"></div>
             <div className="h-3"></div>
             <div className="relative flex flex-col mb-3 pt-1.5 pl-2 pb-[7px] cursor-pointer after:contents-[''] after:absolute after:left-2 after:right-0 after:bottom-0 after:border-b after:border-modifier-accent after:cursor-pointer">
               <div className="flex justify-between items-center h-6 mx-2">
